@@ -25,7 +25,7 @@ def main():
   os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
   youtube_client = get_service()
   for subreddit in SUBREDDITS:
-    create_reddit_playlist(subreddit, youtube_client)
+    playlist_id = create_reddit_playlist(subreddit, youtube_client)
     print("All done! Here's your playlist for /r/" + subreddit + ":")
     print("https://www.youtube.com/playlist?list=" + playlist_id)
 
